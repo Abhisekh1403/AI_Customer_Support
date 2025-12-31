@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { initDb } from "./db/schema";
 import chatRouter from "./routes/chat";
+import debugRouter from "./routes/debug";
+
 /*
 import {
   createConversation,
@@ -39,6 +41,9 @@ console.log("DB TEST MESSAGES:", messages);
 */
 
 app.use("/chat", chatRouter);
+app.use("/debug", debugRouter);
+
+// Health check endpoint
 
 app.get("/health", (_req, res) => {
   res.json({ status: "ok" });

@@ -49,6 +49,7 @@ AI_Customer_Support/
 │   │   │   └── repository.ts    # DB queries (insert/fetch messages)
 │   │   ├── routes/
 │   │   │   └── chat.ts          # /chat/message endpoint
+            └── debug.ts         # Read-only DB debug APIs
 │   │   ├── llm/
 │   │   │   └── groq.service.ts  # LLM integration logic
 │   │   └── index.ts             # Backend entry point
@@ -171,6 +172,52 @@ Response
 sessionId is generated on first message
 
 Subsequent messages must send the same sessionId
+
+🧪 Read-Only Debug Database Endpoints (Evaluation Only)
+
+For evaluation and verification purposes, the backend exposes read-only debug endpoints to inspect persisted data.
+
+These endpoints do not modify the database and are intended for local verification only.
+
+🔹 List all conversations
+GET /debug/conversations
+
+
+Example response:
+
+[
+  {
+    "id": "6c813577-dfc8-422b-82a8-e35b0d086dd5",
+    "created_at": "2025-12-30 19:10:45"
+  }
+]
+
+🔹 View messages for a conversation
+GET /debug/messages/:conversationId
+
+
+Example:
+
+/debug/messages/6c813577-dfc8-422b-82a8-e35b0d086dd5
+
+
+Response:
+
+[
+  {
+    "sender": "user",
+    "text": "Do you ship to the USA?",
+    "created_at": "2025-12-30 19:10:45"
+  },
+  {
+    "sender": "ai",
+    "text": "Yes, we do ship to the USA...",
+    "created_at": "2025-12-30 19:10:46"
+  }
+]
+
+
+These endpoints would be disabled or protected in a production environment.
 
 🧠 Architecture Overview
 Backend Structure
