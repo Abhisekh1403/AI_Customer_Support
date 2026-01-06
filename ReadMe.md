@@ -3,6 +3,8 @@ AI Customer Support Web Application
 An AI-powered customer support web application that allows users to chat with an AI agent.
 The application supports session-based conversations and persists chat history in a database, ensuring continuity across messages.
 
+USE THIS LINK: https://ai-customer-support-frontend.onrender.com
+
 This project was built as part of a software engineering assignment, with a focus on clarity, correctness, and simplicity.
 
 🚀 Features
@@ -299,3 +301,6 @@ https://ai-customer-support-backend-k0rz.onrender.com/debug/conversations
 
 Get Messages:
 https://ai-customer-support-backend-k0rz.onrender.com/debug/messages/"conversation-id"
+
+TO USE THE E-COMMERCE CHAT AGENT:
+URL: https://ai-customer-support-frontend.onrender.com
