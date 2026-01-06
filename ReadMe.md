@@ -277,3 +277,25 @@ No deployment configuration included
 UI intentionally kept simple and functional
 
 These trade-offs were made to align strictly with assignment scope.
+
+## 🌐 Deployment (Render)
+
+The application is deployed on **Render** using two separate services:
+
+### Backend
+- Deployed as a **Render Web Service**
+- Runs the Express + TypeScript backend
+- Uses **SQLite** for persistent storage
+- Fully supports session-based conversations and database persistence
+
+Backend site:
+https://ai-customer-support-backend-k0rz.onrender.com
+
+Health Check:
+https://ai-customer-support-backend-k0rz.onrender.com/health
+
+Get Conversation id:
+https://ai-customer-support-backend-k0rz.onrender.com/debug/conversations
+
+Get Messages:
+https://ai-customer-support-backend-k0rz.onrender.com/debug/messages/"conversation-id"
