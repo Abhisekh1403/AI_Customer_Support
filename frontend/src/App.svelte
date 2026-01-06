@@ -14,7 +14,7 @@
     messages = [...messages, { sender: "user", text }];
 
     try {
-      const res = await fetch("http://localhost:3000/chat/message", {
+      const res = await fetch("https://ai-customer-support-backend-k0rz.onrender.com/chat/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
